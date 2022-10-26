@@ -77,6 +77,29 @@ void StandardPrint(struct BookNode* B)
 }
 
 /*
+ * 采用冒泡对图书编号进行排序
+ * @param BookNode* 目标链表
+ */
+void BookSortByID(struct BookNode* B)
+{
+	struct BookNode* p;
+	struct BookNode* q;
+
+	for (p = B; p != NULL; p = p->next)
+	{
+		for (q = B; q->next != NULL; q = q->next)
+		{
+			if (q->data.ID > q->next->data.ID)
+			{
+				struct Book t = q->data;
+				q->data = q->next->data;
+				q->next->data = t;
+			}
+		}
+	}
+}
+
+/*
  * 打印图书列表
  * @param BookNode* 目标链表
  */
@@ -85,6 +108,7 @@ void PrintBookList(struct BookNode* B)
 	//跳过头结点
 	B = B->next;
 
+	BookSortByID(B);
 	StandardBookTap();
 
 	while (B != NULL)
