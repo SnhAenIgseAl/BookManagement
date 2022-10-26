@@ -12,34 +12,34 @@
  * @Date 2022.10.22
  * @Test SnhAenIgseAl
  * @version 0.1.0 on 2022.10.22 
- *			完成增删改查
+ *		完成增删改查
  * 
  * @version 0.1.1 on 2022.10.23 
- *			优化图书信息输出对齐格式
+ *		优化图书信息输出对齐格式
  * 
  * @version 0.2.0 on 2022.10.24
- *			添加借书和还书功能
- *			添加了一个彩蛋
- *			添加了几本我比较喜欢的书
- *			修复已知BUG
- *			已摆烂
+ *		添加借书和还书功能
+ *		添加了一个彩蛋
+ *		添加了几本我比较喜欢的书
+ *		修复已知BUG
+ *		已摆烂
  */
 
 //图书结构
 struct Book
 {
-	int ID;						//图书编号
+	int ID;				//图书编号
 	char name[MAX_NAME_LEN];	//图书名称
 	char author[MAX_KIND_LEN];	//图书作者
 	char kind[MAX_KIND_LEN];	//图书分类
-	float price;				//图书价格
-	int number;					//图书数量
+	float price;			//图书价格
+	int number;			//图书数量
 };
 
 //BookNode结点
 struct BookNode
 {
-	struct Book data;			//图书数据
+	struct Book data;		//图书数据
 	struct BookNode* next;		//指向下一个Book结点
 };
 
