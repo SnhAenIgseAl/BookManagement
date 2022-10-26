@@ -77,7 +77,7 @@ void StandardPrint(struct BookNode* B)
 }
 
 /*
- * 采用冒泡对图书编号进行排序
+ * 采用冒泡法按图书编号对图书进行排序
  * @param BookNode* 目标链表
  */
 void BookSortByID(struct BookNode* B)
