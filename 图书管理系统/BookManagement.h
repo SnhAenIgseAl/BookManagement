@@ -73,12 +73,7 @@ void StandardBookTap()
  */
 void StandardPrint(struct BookNode* B)
 {
-	printf("%-15s", B->data.ID);
-	printf("%-30s", B->data.name);
-	printf("%-20s", B->data.author);
-	printf("%-10s", B->data.kind);
-	printf("%10s", B->data.price);
-	printf("%10s\n", B->data.number);
+	printf("%-15d%-30s%-20s%-10s%10.2f%10d\n", B->data.ID, B->data.name, B->data.author, B->data.kind, B->data.price, B->data.number);
 }
 
 /*
